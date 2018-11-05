@@ -43,7 +43,7 @@ function classify(song) {
     return colors;
 }
 
-function init() {
+function init(features) {
     for (let color in color_key) {
         colors[color] = {};
     }

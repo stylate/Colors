@@ -7,7 +7,8 @@ var request = require('request')
  *          - For each album: GET https://api.spotify.com/v1/albums/{id}/tracks
  *              - GET https://api.spotify.com/v1/audio-features (can parallelize getting 
  *                      audio features of every song in album)
- *              - Classify each feature into a table consisting of colors based on select constraints.
+ *              - Classify each song into a table consisting of colors based on select features.
+ *                  - IF withinConstraints(song, color) is true: GET https://api.spotify.com/v1/tracks/{id} => retrieve song name
  *      
  *      ----- front-end
  *      
