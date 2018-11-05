@@ -1,25 +1,25 @@
-var red_conditions = {
+var redConditions = {
     'danceability': [0.8, 1.0],
     'energy': [0.9, 1.0],
     'tempo': [100, 200],
     'valence': [0.0, 0.4]
 };
 
-var orange_conditions = {
+var orangeConditions = {
     'danceability': [0.6, 1.0],
     'energy': [0.8, 1.0],
     'tempo': [100, 150],
     'valence': [0.6, 0.8]
 };
 
-var yellow_conditions = {
+var yellowConditions = {
     'danceability': [0.7, 1.0],
     'energy': [0.8, 1.0],
     'tempo': [100, 200],
     'valence': [0.8, 1.0]
 };
 
-var green_conditions = {
+var greenConditions = {
     'danceability': [0.0, 0.4],
     'energy': [0.3, 0.5],
     'instrumentalness': [0.5, 1.0],
@@ -27,7 +27,7 @@ var green_conditions = {
     'valence': [0.4, 0.6]
 };
 
-var blue_conditions = {
+var blueConditions = {
     'danceability': [0.0, 0.4],
     'energy': [0.3, 0.5],
     'instrumentalness': [0.3, 1.0],
@@ -35,7 +35,7 @@ var blue_conditions = {
     'valence': [0.0, 0.4]
 };
 
-var pink_conditions = {
+var pinkConditions = {
     'danceability': [0.5, 1.0],
     'energy': [0.6, 0.8],
     'instrumentalness': [0.0, 0.7],
@@ -44,10 +44,10 @@ var pink_conditions = {
 };
 
 module.exports = {
-    red_conditions: red_conditions,
-    orange_conditions: orange_conditions,
-    yellow_conditions: yellow_conditions,
-    green_conditions: green_conditions,
-    blue_conditions: blue_conditions,
-    pink_conditions: pink_conditions
+    redConditions: redConditions,
+    orangeConditions: orangeConditions,
+    yellowConditions: yellowConditions,
+    greenConditions: greenConditions,
+    blueConditions: blueConditions,
+    pinkConditions: pinkConditions
 };
