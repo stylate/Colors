@@ -216,6 +216,12 @@ function classify(songFeatures) {
     return colors;
 }
 
+module.exports = {
+    searchByName: searchByName,
+    getSongsAndColors: getSongsAndColors
+};
+
 //searchByName("21 Savage");
 //getSongsAndColors('1URnnhqYAYcrqrcwql10ft');
+
 
