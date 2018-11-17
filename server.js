@@ -10,13 +10,21 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // API calls
-app.get('/api/hello', (req, res) => {
+app.get('/home', (req, res) => {
     res.send({ express: 'Hello From Express' });
 });
 
-app.post('/api/world', (req, res) => {
+app.post('/color', async (req, res) => {
     console.log(req.body);
 
+    var title = await query.searchByName(req.body.post);
+    if (req.body.post in title) {
+        var id = title[req.body.post]
+        var colors = await query.getSongsAndColors(id);
+        console.log(colors)
+        // after getting the colors, then we can generate the new page.
+    }
+    console.log(title);
     res.send(
         `I received your POST request. This is what you sent me: ${req.body.post}`,
     );

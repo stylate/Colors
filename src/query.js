@@ -46,19 +46,21 @@ async function getSongsAndColors(id) {
 
 async function spotify_auth() {
   var spotifyApi = new SpotifyWebApi({
-  clientId: key.client_id,
+  clientId: key.client_key,
   clientSecret: key.client_secret,
   });
 
   try {
     var data = await spotifyApi.clientCredentialsGrant();
   } catch(err) {
-    console.log(err);
+      console.log("credentials not granted");
+      console.log(err);
   }
   try { 
     await spotifyApi.setAccessToken(data.body['access_token']);
   } catch(err) {
-    console.log(err);
+      console.log("access token unable to be retrieved");
+      console.log(err);
   }
   return spotifyApi;
 }
